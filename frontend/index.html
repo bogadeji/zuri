@@ -1,0 +1,101 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            margin: 5px;
+            padding: 0;
+            text-align: center;
+            width: 50%;
+            max-width: 900px;
+        }
+        .header {
+            background: #444444;
+            color: #bcbdb8;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        main {
+            background: #f7f6f1;
+            border-bottom: 2px solid black;
+            padding: 40px 0px;
+        }
+        .form__header {
+            font-size: 28px;
+            color: #8a8984;
+        }
+        .form__inputs {
+            width: max-content;
+            margin: 0 auto;
+        }
+        .form__input {
+            text-align: left;
+            margin: 10px 0;
+            display: flex;
+            gap: 10px;
+        }
+        .form__input input,
+        .form__input label  {
+            align-self: center;
+        }
+        .form__input label {
+            color: #bcbdb8;
+        }
+        .buttons {
+            /* height: 40px; */
+            padding-top: 40px;
+        }
+        .buttons button {
+            border: none;
+            border-radius: 3px;
+            margin: 1px;
+            padding: 15px;
+            color: #fff;
+            background: #297d95;
+            font-size: 20px;
+        }
+        .buttons button:hover,
+        .buttons button:focus {
+            background: #3c8daa;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <p class="header-text">Quiz on Important Facts</p>
+    </header>
+    <main>
+        <form class="form">
+            <p class="form__header">Which one of these is a JavaScript package manager?</p>
+            <div class="form__inputs">
+                <div class="form__input">
+                    <input type="radio" id="Nodejs" name="Nodejs" value="Nodejs" />
+                    <label for="Nodejs">a : Node.js</label>
+                </div>
+                <div class="form__input">
+                    <input type="radio" id="TypeScript" name="TypeScript" value="TypeScript" />
+                    <label for="TypeScript">b : TypeScript</label>
+                </div>
+                <div class="form__input">
+                    <input type="radio" id="npm" name="npm" value="npm" />
+                    <label for="npm">c : npm</label>
+                </div>
+            </div>
+        </form>
+        <div class="buttons">
+            <button>Previous Question</button>
+            <button>Next Question</button>
+        </div>
+    </main>
+</body>
+</html>

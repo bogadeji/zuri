@@ -1,0 +1,43 @@
+/* grid.html */
+.grid-layout {
+    margin: 30px auto;
+    display: grid;
+    height: 400px;
+    width: 600px;
+    gap: 15px;
+    grid-template-areas: 
+                        'one one two'
+                        'one one two'
+                        'one one two'
+                        'three four four'
+                        'three four four'
+                        'three five five'
+                        'three five five';
+}
+.one {
+    grid-area: one;
+}
+.two {
+    grid-area: two;
+}
+.three {
+    grid-area: three;
+}
+.four {
+    grid-area: four;
+}
+.five {
+    grid-area: five;
+}
+.red {
+    background: red;
+}
+.orange {
+    background: orange;
+}
+.green {
+    background: green;
+}
+.blue {
+    background: blue;
+}

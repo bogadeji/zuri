@@ -1,13 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
 
+/* General style */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 body {
-    font-size: 15px
+    font-size: 15px;
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 700;
 }
+p,
+button {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: lighter;
+    line-height: 1.8;
+    font-size: 12px;
+}
+/* .flow > *:where(:not(:first-child)) {
+    margin-top: var(--flow-space, 5em);
+} */
+
 /* header */
 header {
     /* height: 30px; */
@@ -33,13 +47,118 @@ nav ul li a:active {
     background: blue;
     color: #fff;
 }
+
+
 /* index.html */
+.flex-layout {
+    display: flex;
+    margin: 30px auto;
+    width: 100%;
+    max-width: 800px;
+}
+.car {
+    height: 450px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    --flow-space: 1.5rem;
+}
+.car--content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.car:first-child {
+    border-radius: 10px 0 0 10px;
+}
+.car:last-child {
+    border-radius: 0 10px 10px 0;
+}
+.car.sedans {
+    background: hsl(31, 77%, 52%);
+}
+.car.suvs {
+    background: hsl(184, 100%, 22%);
+}
+.car.luxury {
+    background: hsl(179, 100%, 13%);
+}
+.car .img {
+    height: 50px
+}
+.car-heading {
+    text-transform: uppercase;
+}
+.car-text {
+    font-size: 12px;
+}
+.car-btn {
+    background-color: inherit;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 30px;
+    width: max-content;
+}
+.car-btn:hover,
+.car-btn:focus {
+    background: #fff;
+}
+.car.sedans .car-btn:hover,
+.car.sedans .car-btn:focus {
+    color: hsl(31, 77%, 52%);
+}
+.car.suvs .car-btn:hover,
+.car.suvs .car-btn:focus {
+    color: hsl(184, 100%, 22%);
+}
+.car-luxury .car-btn:hover,
+.car.luxury .car-btn:focus {
+    color: hsl(179, 100%, 13%);
+}
+@media screen and (max-width: 712px) {
+    .car {
+        padding: 25px
+    }
+}
+@media screen and (min-width: 375px) {
+    .flex-layout {
+        flex: 1;
+    }
+}
+@media screen and (max-width: 375px) {
+    main {
+        margin: 50px 10px;
+    }
+    .flex-layout {
+        flex-direction: column;
+    }
+    .car {
+        padding: 40px;
+        flex-direction: column;
+        gap: 30px;
+        flex: unset;
+        height: 400px;
+    }
+    .car:first-child {
+        border-radius: 10px 10px 0 0;
+    }
+    .car:last-child {
+        border-radius: 0 0 10px 10px;
+    }
+    .car-text {
+        font-size: 14px;
+    }
+}
+
 /* grid.html */
 .grid-layout {
     margin: 30px auto;
     display: grid;
     height: 400px;
-    width: 600px;
+    max-width: 600px;
     gap: 15px;
     grid-template-areas: 
                         'one one two'
@@ -49,6 +168,17 @@ nav ul li a:active {
                         'three four four'
                         'three five five'
                         'three five five';
+}
+@media screen and (max-width: 375px) {
+    main {
+        margin: 30px 20px;
+    }
+    .grid-layout {
+        max-width: 100%;
+        margin: 30px auto;
+        gap: 10px;
+        height: 300px;
+    }
 }
 .one {
     grid-area: one;

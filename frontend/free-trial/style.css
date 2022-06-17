@@ -112,7 +112,7 @@ main {
     width: 100%;
     background: var(--green);
     color: var(--white);
-    padding: 13px 0;
+    padding: 15px 0;
     border: none;
     border: 1px solid var(--grayish-blue);
     border-radius: 5px;
@@ -121,6 +121,12 @@ main {
     box-shadow: 0px 3px 0px -1px rgba(84,70,70,0.51);
     -webkit-box-shadow: 0px 3px 0px -1px rgba(84,70,70,0.51);
     -moz-box-shadow: 0px 3px 0px -1px rgba(84,70,70,0.51);
+}
+.claim:hover,
+.claim:focus,
+.claim:active {
+    background: var(--white);
+    color: var(--green);
 }
 .terms-and-conditions {
     color: var(--grayish-blue);
@@ -136,12 +142,12 @@ main {
         background-image: url('assets/bg-intro-desktop.png');
     }
     main {
-        margin: 5em 7em;
+        margin: 5em 8em;
     }
     .free-trial {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 4em;
+        gap: 5em;
         --flow-space: 0;
     }
     .free-trial--intro {

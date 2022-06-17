@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage - Login</title>
+    <link rel="stylesheet" href="style/index.css" />
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-bar">
+            <ul class="nav-bar__list-items">
+                <li class="nav-bar__list-item"><a href="./index.html">About me</a></li>
+                <li class="nav-bar__list-item"><a href="./contact.html">Contact me</a></li>
+                <li class="nav-bar__list-item"><a href="./registration.html">Sign up</a></li>
+                <li class="nav-bar__list-item"><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="login-form">
+        <div class="form__intro ">
+            <h1 class="py-0">Login in</h1>
+            <p class="py-0">Sign in to your account</p>
+        </div>
+        <form>
+            <div class="input-group__item">
+                <label for="email">Email Address</label>
+                <input type="email" placeholder="Type in your email address" required pattern="" />
+            </div>
+            <div class="input-group__item">
+                <label for="password">Password</label>
+                <input type="password" placeholder="Type in your password" required pattern="" />
+            </div>
+            <div class="flex-column justify-center align-center flow">
+                <button type="submit">Sign in</button>
+                <a href="./registration.html">Sign up</a>
+                <a href="./index.html">Back to home</a>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div>
+            <p>&copy; AbigailAdeboga 2022</p>
+        </div>
+    </footer>
+</body>
+</html>

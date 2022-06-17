@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .chessboard {
+            background: #5F452E;
+            border: 100px solid #D5A660;
+            border-radius: 9px;
+            margin: 0 auto;
+        }
+        .chessboard,
+        .chess-tiles {
+            width: max-content;
+            height: max-content;
+        }
+        .chess-tiles {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            border: px solid #5F452E;
+        }
+        .chess-tile {
+            height: 100px;
+            width: 100px;
+            margin: 1px;
+        }
+        .chess-tile.black {
+            background: #5F452E;
+        }
+        .chess-tile.white {
+            background: #D5A660;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chessboard - HTML & CSS</h1>
+
+    <div class="chessboard">
+        <div class="chess-tiles">
+            <!-- 1st row -->
+            <div class="chess-tile white"></div>
+            <div class="chess-tile black"></div>
+            <div class="chess-tile white"></div>
+            <div class="chess-tile black"></div>
+            <div class="chess-tile white"></div>
+            <!-- 2nd row -->
+            <div class="chess-tile black"></div>
+            <div class="chess-tile white"></div>
+            <div class="chess-tile black"></div>
+            <div class="chess-tile white"></div>
+            <div class="chess-tile black"></div>
+            <!-- 3rd row -->
+            <div class="chess-tile white"></div>
+            <div class="chess-tile black"></div>
+            <div class="chess-tile white"></div>
+            <div class="chess-tile black"></div>
+            <div class="chess-tile white"></div>
+            <!-- 4th row -->
+            <div class="chess-tile black"></div>
+            <div class="chess-tile white"></div>
+            <div class="chess-tile black"></div>
+            <div class="chess-tile white"></div>
+            <div class="chess-tile black"></div>
+            <!-- 5th row -->
+            <div class="chess-tile white"></div>
+            <div class="chess-tile black"></div>
+            <div class="chess-tile white"></div>
+            <div class="chess-tile black"></div>
+            <div class="chess-tile white"></div>
+        </div>
+    </div>
+</body>
+</html>

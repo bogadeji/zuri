@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-size: 16px;
+    background: rgba(248, 248, 248,1);
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.flow {
+    gap: var(--flow-space, 0.4em);
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.justify-center {
+    justify-content: center;
+}
+.align-center {
+    justify-content: center;
+    align-items: center;
+}
+.justify-right {
+    justify-content: flex-end;
+}
+.justify-left {
+    justify-content: flex-start;
+}
+.grid {
+    display: grid;
+}
+img,
+picture {
+    max-width: 100%;
+}
+input:invalid {
+    border: 2px dashed red;
+}
+
+input:valid {
+    border: 2px solid black;
+}
+/* Home page */
+.header {
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.16) 1px 1px 5px 0px;
+    padding: 0 30px;
+    /* margin: 20px 100px; */
+    /* border-radius: 50px; */
+    width: 100%;
+    z-index: 10;
+}
+.nav-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+ul.nav-bar__list-items {
+    margin: 0;
+}
+li.nav-bar__list-item {
+    display: inline-block;
+    list-style: none;
+    margin: 0 3px;
+}
+li.nav-bar__list-item a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    height: 40px;
+    text-align: center;
+    padding: 20px 3px;
+    margin: 0 5px;
+}
+li.nav-bar__list-item a:hover {
+    color: #00f;
+}
+.img__profile {
+    height: 200px;
+    width: 300px;
+    border-radius: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+.img__profile img {
+    border-radius: 50%;
+    border: 1px solid blue;
+}
+.contact-me__btn {
+    height: 30px;
+    padding: 10px;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid #000;
+    width: 100%;
+    padding: 1px 0;
+    text-align: center;
+    align-self: flex-end;
+    height: max-content;
+}
+
+/* Contact form */
+
+
+
+/* All forms */
+.form__intro {
+    text-align: center;
+    margin: 50px;
+}
+.form__intro h1,
+.form__intro p {
+    margin: 0;
+}
+form {
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.16) 1px 1px 5px 0px;
+    padding: 20px 40px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+}
+.input-group__items {
+    width: 100%;
+}
+form .input-group__item {
+    margin: 15px 0;
+    width: 100%;
+}
+form label {
+    display: block;
+    font-size: 18;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+form .input-group__item input,
+form .input-group__item textarea,
+form .input-group__item select
+ {
+    width: 100%;
+    border: 1px solid purple;
+    border-radius: 5px;
+    padding: 4px 10px;
+}
+form .input-group__item select option
+ {
+    height: 40px;
+}
+form .input-group__item input {
+    height: 40px;
+}
+form .input-group__item textarea {
+    height: 100px;
+}
+form button {
+    background-color: blue;
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+}

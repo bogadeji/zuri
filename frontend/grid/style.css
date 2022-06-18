@@ -20,9 +20,6 @@ button {
     line-height: 1.8;
     font-size: 12px;
 }
-/* .flow > *:where(:not(:first-child)) {
-    margin-top: var(--flow-space, 5em);
-} */
 
 /* header */
 header {
@@ -118,7 +115,7 @@ nav ul li a:active {
 .car.suvs .car-btn:focus {
     color: hsl(184, 100%, 22%);
 }
-.car-luxury .car-btn:hover,
+.car.luxury .car-btn:hover,
 .car.luxury .car-btn:focus {
     color: hsl(179, 100%, 13%);
 }

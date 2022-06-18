@@ -103,7 +103,7 @@ console.log('Ready!!!!!')
         if (!inputIsRequired(password)) {
             showErrorOrSuccess(passwordElement, 'Password cannot be empty');
         } else if (!isPasswordSecure(password)) {
-            showErrorOrSuccess(passwordElement, 'Password must has at least 8 characters that include at least 1 lowercase character, 1 uppercase characters, 1 number, and 1 special character in (!@#$%^&*)');
+            showErrorOrSuccess(passwordElement, 'Password must have at least 8 characters that include at least 1 lowercase character, 1 uppercase characters, 1 number, and 1 special character in (!@#$%^&*)');
         } else {
             showErrorOrSuccess(passwordElement);
 
@@ -147,7 +147,7 @@ console.log('Ready!!!!!')
         }
     });
 
-    const debounce = (fn, delay = 500) => {
+    const debounce = (fn, delay = 00) => {
         let timeoutId;
         return (...args) => {
             if(timeoutId) {

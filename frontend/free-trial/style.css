@@ -24,7 +24,7 @@ body {
     text-align: center;
 }
 button {
-    cursor: b v       cxvfgtr56435335y90oiudopointer;
+    cursor: pointer;
 }
 .flow > *:where(:not(:first-child)) {
     margin-top: var(--flow-space, 1em);

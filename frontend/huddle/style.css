@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --pink: hsl(322, 100%, 66%);
+    --pale-cyan: hsl(193, 100%, 96%);
+    --dark-cyan: hsl(192, 100%, 9%);
+    --grayish-blue: hsl(208, 11%, 55%);
+    --white: #fff;
+    --black: #000;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+img,
+picture {
+    max-width: 100%;
+}
+.flow > *:where(:not(:first-child)) {
+    margin-top: var(--flow-space, 1em);
+}
+main {
+    
+}
+.hero {
+    background: var(--pale-cyan);
+    background-image: url('assets/bg-hero-mobile.svg');
+}
+nav {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    height: 25px;
+}
+.nav-btn {
+    background: var(--white);
+    color: var(--black);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+    font-size: 14px;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 50px;
+    box-shadow: 0px 3px 1px 0px rgba(0,0,0,0.09);
+    -webkit-box-shadow: 0px 3px 1px 0px rgba(0,0,0,0.09);
+    -moz-box-shadow: 0px 3px 1px 0px rgba(0,0,0,0.09);
+}
+.hero--intro {
+    display: block;
+    padding: 3em 0 5em;
+}
+.hero--intro-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    --flow-space: 1.5em;
+    margin-right: 3em;
+}
+.hero--intro-heading {
+    font-size: 2.1em
+}
+.hero--intro-text {
+    font-size: 16px;
+    font-weight: 500;
+}
+.hero--intro-btn {
+}
+.get-started-btn {
+    padding: 1.5em 5em;
+    width: max-content;
+    background: var(--pink);
+    color: var(--white);
+    border-radius: 20em;
+    border: none;
+}
+section {
+    padding: 0 6em;
+}
+.info {
+    margin: 8em 0 15em;
+    --flow-space: 2em;
+}
+.card {
+    box-shadow: 1px 0px 5px 1px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 1px 0px 5px 1px rgba(0,0,0,0.1);
+    -moz-box-shadow: 1px 0px 5px 1px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+.info--card {
+    padding: 3em 2em 3em 5em;
+    height: 400px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4em;
+}
+.info-card>* {
+    /* flex: 1 */
+}
+.info-card--img {
+    height: 300px;
+}
+.info-card--img img {
+    max-height: 100%;
+}
+footer {
+    background: var(--dark-cyan);
+    /* padding:05em 4em; */
+}
+.footer--banner {
+    padding: 3em 2em;
+    --flow-space: 2em;
+    background: var(--white);
+    width: 90%;
+    max-width: 700px;
+    margin: -8% auto 0;
+}
+
+@media screen and (min-width: 375px) {
+    .hero {
+        background-image: url('assets/bg-hero-desktop.svg');
+    }
+    .hero--intro-content {
+        margin-right: 3.1em;
+    }
+    nav {
+        padding: 40px 0;
+    }
+    .logo {
+        height: 25px;
+    }
+    .nav-btn {
+    }
+    .hero--intro {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1em;
+        padding: 3em 0 5em;
+    }
+    .hero--intro-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        --flow-space: 1.5em;
+        margin-right: 3em;
+    }
+    .hero--intro-heading {
+        font-size: 2.1em
+    }
+    .hero--intro-text {
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .hero--intro-btn {
+    }
+    section {
+        padding: 0 6em;
+    }
+    .info {
+        margin: 8em 0 15em;
+        --flow-space: 2em;
+    }
+    .card {
+    }
+    .info--card {
+        padding: 3em 2em 3em 5em;
+        height: 400px;
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4em;
+    }
+    div.info--card:nth-child(2n + 1) div:first-child {
+        /* order: -1; */
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .info-card--text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        --flow-space: 1em;
+    }
+    .info-card--text h1 {
+        font-weight: bolder;
+    }
+    .info-card--text p {
+       text-align: left;
+       color: var(--grayish-blue)
+    }
+    .info-card>* {
+        /* flex: 1 */
+    }
+    .info-card--img {
+        height: 300px;
+    }
+    .info-card--img img {
+        max-height: 100%;
+    }
+}

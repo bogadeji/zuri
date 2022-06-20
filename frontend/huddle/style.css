@@ -112,12 +112,12 @@ section {
     border-radius: 10px;
 }
 .info--card {
-    padding: 3em 2em 3em 5em;
+    /* padding: 3em 2em 3em 5em;
     height: 400px;
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: repeat(2, 1fr);
-    gap: 4em;
+    gap: 4em; */
 }
 .info-card>* {
     /* flex: 1 */
@@ -176,10 +176,6 @@ footer .logo {
     .nav-btn {
     }
     .hero--intro {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1em;
-        padding: 3em 0 5em;
     }
     .hero--intro-content {
         display: flex;
@@ -206,12 +202,12 @@ footer .logo {
     .card {
     }
     .info--card {
-        padding: 3em 2em 3em 5em;
+        /* padding: 3em 2em 3em 5em;
         height: 400px;
         display: grid;
         grid-auto-flow: column;
         grid-template-columns: repeat(2, 1fr);
-        gap: 4em;
+        gap: 4em; */
     }
     div.info--card:nth-child(2n + 1) div:first-child {
         /* order: -1; */
@@ -299,5 +295,49 @@ footer .logo {
     .footer--links .contact > div > .img-icon {
         height: 15px;
         width: 15px;
+    }
+}
+@media screen and (min-width: 900px) {
+
+    .hero--intro {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1em;
+        padding: 3em 0 5em;
+        text-align: center;
+    }
+    .info--card {
+        padding: 3em 2em 3em 5em;
+        height: 400px;
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4em;
+    }
+}
+@media screen and (max-width: 900px) {
+
+    .hero--intro {
+        text-align: center;
+    }
+    .hero--intro-content {
+        margin: 0px auto 60px;
+        text-align: center;
+    }
+    .hero--intro-btn {
+        margin: 3em auto 0;
+    }
+    .info--card {
+        padding: 3em 2em;
+        display: flex;
+        flex-direction: column;
+        gap: 5em;
+        justify-content: center;
+    }
+    .info-card--text {
+        align-items: center;
+    }
+    .info-card--text p {
+        text-align: center;
     }
 }

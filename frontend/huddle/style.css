@@ -13,6 +13,7 @@
     --grayish-blue: hsl(208, 11%, 55%);
     --white: #fff;
     --black: #000;
+    --foot-banner-height: 200px;
 }
 body {
     font-family: 'Open Sans', sans-serif;
@@ -31,6 +32,7 @@ h5,
 h6 {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
+    color: var(--dark-cyan)
 }
 img,
 picture {
@@ -72,12 +74,12 @@ nav {
     padding: 3em 0 5em;
 }
 .hero--intro-content {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: left;
     --flow-space: 1.5em;
-    margin-right: 3em;
+    margin-right: 3em; */
 }
 .hero--intro-heading {
     font-size: 2.1em
@@ -97,10 +99,10 @@ nav {
     border: none;
 }
 section {
-    padding: 0 6em;
+    padding: 0 1em;
 }
 .info {
-    margin: 8em 0 15em;
+    margin: 8em 0 1em;
     --flow-space: 2em;
 }
 .card {
@@ -126,19 +128,38 @@ section {
 .info-card--img img {
     max-height: 100%;
 }
-footer {
-    background: var(--dark-cyan);
-    /* padding:05em 4em; */
-}
 .footer--banner {
-    padding: 3em 2em;
     --flow-space: 2em;
     background: var(--white);
     width: 90%;
-    max-width: 700px;
-    margin: -8% auto 0;
+    max-width: 600px;
+    transform: translateY( 50%);
+    margin: 0 auto;
+    color: var(--dark-cyan);
+    z-index: 5;
+    height: var(--foot-banner-height);
+    text-align: center;
 }
+footer {
+}
+footer .logo {
+    height: 30px;
+}
+.footer--links {
+}
+.footer--links .contact > div {
 
+}
+.footer--links .contact > div > * {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: flex-start;
+}
+.footer--links .contact > div > .img-icon {
+}
+.footer--links .contact > div > p {
+}
 @media screen and (min-width: 375px) {
     .hero {
         background-image: url('assets/bg-hero-desktop.svg');
@@ -175,15 +196,13 @@ footer {
         font-size: 16px;
         font-weight: 500;
     }
-    .hero--intro-btn {
-    }
     section {
         padding: 0 6em;
     }
-    .info {
+    /* .info {
         margin: 8em 0 15em;
         --flow-space: 2em;
-    }
+    } */
     .card {
     }
     .info--card {
@@ -221,5 +240,64 @@ footer {
     }
     .info-card--img img {
         max-height: 100%;
+    }
+    footer {
+        background: var(--dark-cyan);
+        position: relative;
+        z-index: -1;
+        padding: calc( (var(--foot-banner-height) / 2) + 100px) 5em calc( (var(--foot-banner-height) / 2));
+        color: var(--white);
+        text-align: left;
+    }
+    .footer--links {
+        display: grid;
+        grid-template-columns: 35% repeat(3, 1fr);
+        align-items: flex-start;
+        gap: 4em;
+    
+    }
+    .footer--links .contact > div {
+        display: grid;
+        grid-template-columns: 20px 21fr;
+        gap: 2em;
+    }
+    .footer--links .contact > div > * {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        align-self: flex-start;
+    }
+    .footer--links .contact > div > .img-icon {
+        height: 20px;
+        width: 20px;
+    }
+    .footer--links .contact > div > p {
+        line-height: 1.6;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 760px) {
+    section {
+        padding: 0 3em;
+    }
+    footer {
+        padding-left: 2em;
+        padding-right: 2em;
+        font-size: 16px;
+    }
+    .footer--links {
+        grid-template-columns: 40% repeat(3, 1fr);
+        gap: 1em;
+    }
+    .footer--links .contact > div {
+        gap: 1em;
+    }
+    .footer--links .contact > div > p {
+        line-height: 1.6;
+        font-size: 12px;
+    }
+    .footer--links .contact > div > .img-icon {
+        height: 15px;
+        width: 15px;
     }
 }
